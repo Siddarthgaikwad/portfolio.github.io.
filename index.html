@@ -5,67 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siddarth Gaikwad - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <nav class="navbar">
         <div class="container">
-            <h1>Siddarth Gaikwad</h1>
-            <p>Passionate about technology and problem-solving</p>
+            <div class="logo">SG</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Siddarth Gaikwad</h1>
+                    <p class="subtitle">Technology Enthusiast & Problem Solver</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="primary-btn">Get in Touch</a>
+                        <a href="#projects" class="secondary-btn">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for profile image -->
+                    <div class="profile-placeholder"></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="main-content">
-            <div class="card projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><strong>Waste Water Management in Mumbai</strong> - Innovative solutions for urban water management</li>
-                    <li><strong>Mumbai Water Ecosystem Enhancement</strong> - Improving water quality and accessibility for Mumbai residents</li>
-                </ul>
+    <main>
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Waste Water Management</h3>
+                            <p>Innovative solutions for urban water management in Mumbai, focusing on sustainable practices and efficient distribution systems.</p>
+                            <div class="project-tags">
+                                <span>Environmental</span>
+                                <span>Urban Planning</span>
+                                <span>Sustainability</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Mumbai Water Ecosystem</h3>
+                            <p>Comprehensive solution for improving water quality and accessibility for Mumbai residents through smart technology integration.</p>
+                            <div class="project-tags">
+                                <span>Smart City</span>
+                                <span>Infrastructure</span>
+                                <span>Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card skills">
-                <h2>Technical Skills</h2>
-                <ul>
-                    <li>Programming Languages: C++, Python, JavaScript</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Web Development Stack: React.js, Node.js</li>
-                </ul>
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Full Stack</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Core CS</h3>
+                        <ul>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card social-links">
-                <h2>Connect With Me</h2>
-                <ul>
-                    <li><a href="https://github.com/Siddarthgaikwad" target="_blank">GitHub Profile</a></li>
-                    <li><a href="https://www.linkedin.com/in/siddarth-gaikwad-169455273" target="_blank">LinkedIn Profile</a></li>
-                </ul>
+        <section class="section academic-section">
+            <div class="container">
+                <h2 class="section-title">Academic Profile</h2>
+                <div class="academic-grid">
+                    <div class="academic-card">
+                        <div class="academic-info">
+                            <div class="info-item">
+                                <h4>Course</h4>
+                                <p>Algorithmic Problem Solving (24ECAC203)</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>University</h4>
+                                <p>KLE Technological University</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Instructor</h4>
+                                <p>K M M Rajashekharaiah sir</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>SRN</h4>
+                                <p>01fe23bci051</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Portfolio Domain</h4>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card portfolio-info">
-                <h2>Academic Information</h2>
-                <dl>
-                    <dt>Course Name</dt>
-                    <dd>Algorithmic Problem Solving</dd>
-                    <dt>Course Code</dt>
-                    <dd>24ECAC203</dd>
-                    <dt>Name</dt>
-                    <dd>Siddarth Gaikwad</dd>
-                    <dt>SRN</dt>
-                    <dd>01fe23bci051</dd>
-                    <dt>Course Instructor</dt>
-                    <dd>K M M Rajashekharaiah sir</dd>
-                    <dt>University</dt>
-                    <dd>KLE Technological University</dd>
-                    <dt>Portfolio Topic/Domain</dt>
-                    <dd>Google</dd>
-                </dl>
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="social-links">
+                    <a href="https://github.com/Siddarthgaikwad" target="_blank" class="social-btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/siddarth-gaikwad-169455273" target="_blank" class="social-btn">LinkedIn</a>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <blockquote>
+    <footer>
+        <div class="container">
+            <blockquote class="inspiration-quote">
                 "The only way to do great work is to love what you do." – Steve Jobs
             </blockquote>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
