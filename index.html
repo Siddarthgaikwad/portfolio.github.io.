@@ -201,35 +201,89 @@
             </div>
         </section>
 
-        <!-- Course Reflection Section -->
-        <section id="course-reflection" class="section course-reflection-section">
+       <section id="course-reflection" class="section course-reflection-section">
             <div class="container">
                 <h2 class="section-title">Course Reflection</h2>
                 <div class="reflection-content">
                     <h3>Reflective Insights on Problem Solving</h3>
                     <ul>
                         <li><strong>How do you determine the most efficient approach when solving a complex problem?</strong>  
-                            The approach depends on analyzing time complexity, space complexity, and constraints of the problem. I compare various algorithms and pick the most optimized one based on the given requirements.</li>
+                            The approach depends on analyzing time complexity, space complexity, and constraints of the problem. I compare various algorithms and pick the most optimized one based on the given requirements.
+
+                            <h4>Example (Sorting with Merge Sort):</h4>
+                            <pre><code>
+function mergeSort(arr) {
+    if (arr.length <= 1) return arr;
+    let mid = Math.floor(arr.length / 2);
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    
+    return merge(left, right);
+}
+
+function merge(left, right) {
+    let result = [], i = 0, j = 0;
+    while (i < left.length && j < right.length) {
+        if (left[i] < right[j]) result.push(left[i++]);
+        else result.push(right[j++]);
+    }
+    return result.concat(left.slice(i)).concat(right.slice(j));
+}
+
+console.log(mergeSort([5, 3, 8, 4, 2]));
+                            </code></pre>
+                        </li>
                         <li><strong>Reflect on a situation where you need to balance multiple conflicting constraints in a design.</strong>  
-                            When designing a system with limited resources, I prioritized critical features first while ensuring non-essential components remained functional, adopting a trade-off strategy to maximize the system’s efficiency.</li>
+                            When designing a system with limited resources, I prioritized critical features first while ensuring non-essential components remained functional, adopting a trade-off strategy to maximize the system’s efficiency.
+
+                            <h4>Example (Optimizing Space and Time Complexity):</h4>
+                            <pre><code>
+// Time efficient solution
+function findMax(arr) {
+    return Math.max(...arr);
+}
+
+// Space efficient solution
+function findMaxOptimized(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i];
+    }
+    return max;
+}
+                            </code></pre>
+                        </li>
                         <li><strong>What criteria do you use to evaluate the effectiveness of a solution?</strong>  
-                            I evaluate a solution by considering correctness, efficiency, maintainability, and simplicity. For instance, the correctness of sorting algorithms can be validated by their ability to handle edge cases and large datasets.</li>
+                            I evaluate a solution by considering correctness, efficiency, maintainability, and simplicity. For instance, the correctness of sorting algorithms can be validated by their ability to handle edge cases and large datasets.
+
+                            <h4>Example (Evaluating Sorting Algorithm):</h4>
+                            <pre><code>
+function isSorted(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[i - 1]) return false;
+    }
+    return true;
+}
+
+console.log(isSorted([1, 2, 3, 4]));  // true
+console.log(isSorted([1, 3, 2, 4]));  // false
+                            </code></pre>
+                        </li>
                         <li><strong>How can you adapt an existing solution to address a new or unforeseen challenge?</strong>  
-                            Solutions can be adapted by identifying bottlenecks or areas where a new constraint requires optimization, such as adapting a batch-processing algorithm to real-time streaming data.</li>
-                        <li><strong>What strategies do you use to identify patterns or structures in complex datasets or problems?</strong>  
-                            I use clustering algorithms like K-means to identify patterns, especially in large datasets, which can help uncover hidden relationships and structures.</li>
-                        <li><strong>How do you decide when to prioritize simplicity over optimization in a solution?</strong>  
-                            Simplicity is prioritized when the problem is small-scale, or when optimizing complexity adds little value compared to the overhead of more complicated solutions.</li>
-                        <li><strong>Reflect on how breaking down a problem into smaller components can help you approach it more effectively.</strong>  
-                            Breaking problems into smaller sub-problems allows for better manageability, easier debugging, and systematic solution design.</li>
-                        <li><strong>Reflect on the trade-offs while choosing between different approaches to solve a problem.</strong>  
-                            A balance needs to be struck between the efficiency of the algorithm and its complexity. For example, dynamic programming is more accurate but may have higher space complexity.</li>
-                        <li><strong>How do you identify and address potential limitations or weaknesses in a proposed solution?</strong>  
-                            Testing edge cases and performance bottlenecks helps identify limitations, allowing me to refine the solution further.</li>
-                        <li><strong>Reflect on how applying knowledge from one context can help you solve a problem in a different context.</strong>  
-                            Knowledge from graph algorithms can help solve network routing problems, as both deal with optimal pathfinding and connectivity issues.</li>
-                        <li><strong>How do you decide when to innovate versus relying on tried-and-tested solutions?</strong>  
-                            Innovation is necessary when existing solutions fail to meet new requirements or constraints, but I rely on established solutions when they are efficient and scalable enough.</li>
+                            Solutions can be adapted by identifying bottlenecks or areas where a new constraint requires optimization, such as adapting a batch-processing algorithm to real-time streaming data.
+
+                            <h4>Example (Adapting Merge Sort to Handle Streaming Data):</h4>
+                            <pre><code>
+// Adapting Merge Sort for real-time updates
+function mergeSortRealTime(arr, newElement) {
+    arr.push(newElement);
+    return mergeSort(arr);
+}
+
+let arr = [2, 5, 1, 8, 7];
+console.log(mergeSortRealTime(arr, 3));  // Sorts after adding 3
+                            </code></pre>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -252,6 +306,9 @@
                 "The only way to do great work is to love what you do." – Steve Jobs
             </blockquote>
         </div>
+    </footer>
+</body>
+</html>
     </footer>
 </body>
 </html>
