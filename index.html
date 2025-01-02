@@ -266,20 +266,24 @@ int main() {
         </ul>
     </div>
 </section>
-
-            #include <iostream>
-#include <vector>
-#include <stack>
-#include <queue>
+            <!-- Code Example: Real-Time Data Processing -->
+<div class="code-container code-center">
+    <h4>Code Example: Real-Time Data Processing for Wastewater Analytics</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;stack&gt;
+#include &lt;queue&gt;
 
 using namespace std;
 
 // Simulate real-time data processing for wastewater analytics
 class RealTimeAnalytics {
 private:
-    vector<double> sensorData; // Array for storing sensor readings
-    stack<string> eventStack; // Stack for event management
-    queue<double> dataQueue;  // Queue for real-time data processing
+    vector&lt;double&gt; sensorData; // Array for storing sensor readings
+    stack&lt;string&gt; eventStack; // Stack for event management
+    queue&lt;double&gt; dataQueue;  // Queue for real-time data processing
 
 public:
     // Add new sensor reading (real-time data)
@@ -289,38 +293,38 @@ public:
     }
 
     // Simulate an event and store it in the stack
-    void logEvent(const string& event) {
+    void logEvent(const string&amp; event) {
         eventStack.push(event);
-        cout << "Event logged: " << event << endl;
+        cout &lt;&lt; "Event logged: " &lt;&lt; event &lt;&lt; endl;
     }
 
     // Process data in the queue (FIFO order)
     void processQueue() {
-        cout << "\nProcessing data queue:" << endl;
+        cout &lt;&lt; "\nProcessing data queue:" &lt;&lt; endl;
         while (!dataQueue.empty()) {
             double data = dataQueue.front();
             dataQueue.pop();
-            cout << "Processed data: " << data << endl;
+            cout &lt;&lt; "Processed data: " &lt;&lt; data &lt;&lt; endl;
         }
     }
 
     // Undo the last logged event using the stack
     void undoLastEvent() {
         if (!eventStack.empty()) {
-            cout << "\nUndoing event: " << eventStack.top() << endl;
+            cout &lt;&lt; "\nUndoing event: " &lt;&lt; eventStack.top() &lt;&lt; endl;
             eventStack.pop();
         } else {
-            cout << "\nNo events to undo." << endl;
+            cout &lt;&lt; "\nNo events to undo." &lt;&lt; endl;
         }
     }
 
     // Display all sensor data stored in the array
     void displaySensorData() {
-        cout << "\nSensor Data (Array): ";
+        cout &lt;&lt; "\nSensor Data (Array): ";
         for (double data : sensorData) {
-            cout << data << " ";
+            cout &lt;&lt; data &lt;&lt; " ";
         }
-        cout << endl;
+        cout &lt;&lt; endl;
     }
 };
 
@@ -349,10 +353,9 @@ int main() {
     analytics.undoLastEvent();
 
     return 0;
-}
-
-            
-
+        </code>
+    </pre>
+</div>
 
 
         <!-- New Section: Reflections -->
