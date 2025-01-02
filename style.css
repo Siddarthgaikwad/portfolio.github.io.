@@ -309,25 +309,30 @@ footer {
 }
 
 
-        .code-center {
-            margin: 2rem auto;
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
-            overflow-x: auto;
-        }
+       .code-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    overflow-x: auto;
+}
 
-        .code-container h4 {
-            text-align: center;
-            font-size: 1.25rem;
-            color: #333;
-        }
+.code-container h4 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #333;
+}
 
-        pre code {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-  
+pre code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
