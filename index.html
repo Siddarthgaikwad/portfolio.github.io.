@@ -267,6 +267,92 @@ int main() {
     </div>
 </section>
 
+            #include <iostream>
+#include <vector>
+#include <stack>
+#include <queue>
+
+using namespace std;
+
+// Simulate real-time data processing for wastewater analytics
+class RealTimeAnalytics {
+private:
+    vector<double> sensorData; // Array for storing sensor readings
+    stack<string> eventStack; // Stack for event management
+    queue<double> dataQueue;  // Queue for real-time data processing
+
+public:
+    // Add new sensor reading (real-time data)
+    void addSensorData(double data) {
+        sensorData.push_back(data);
+        dataQueue.push(data);
+    }
+
+    // Simulate an event and store it in the stack
+    void logEvent(const string& event) {
+        eventStack.push(event);
+        cout << "Event logged: " << event << endl;
+    }
+
+    // Process data in the queue (FIFO order)
+    void processQueue() {
+        cout << "\nProcessing data queue:" << endl;
+        while (!dataQueue.empty()) {
+            double data = dataQueue.front();
+            dataQueue.pop();
+            cout << "Processed data: " << data << endl;
+        }
+    }
+
+    // Undo the last logged event using the stack
+    void undoLastEvent() {
+        if (!eventStack.empty()) {
+            cout << "\nUndoing event: " << eventStack.top() << endl;
+            eventStack.pop();
+        } else {
+            cout << "\nNo events to undo." << endl;
+        }
+    }
+
+    // Display all sensor data stored in the array
+    void displaySensorData() {
+        cout << "\nSensor Data (Array): ";
+        for (double data : sensorData) {
+            cout << data << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    RealTimeAnalytics analytics;
+
+    // Simulate real-time sensor readings
+    analytics.addSensorData(7.5);
+    analytics.addSensorData(6.8);
+    analytics.addSensorData(7.2);
+
+    // Log events
+    analytics.logEvent("Sensor calibration");
+    analytics.logEvent("Anomaly detected");
+    
+    // Display all sensor data
+    analytics.displaySensorData();
+
+    // Process queued data
+    analytics.processQueue();
+
+    // Undo the last event
+    analytics.undoLastEvent();
+
+    // Undo another event
+    analytics.undoLastEvent();
+
+    return 0;
+}
+
+            
+
 
 
         <!-- New Section: Reflections -->
