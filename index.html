@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,1026 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siddarth Gaikwad - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">SG</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#business-cases">Business Cases</a> <!-- New Tab -->
-                <a href="#course-reflection">Course Reflection</a> <!-- New Tab -->
-                <a href="#contact">Contact</a>
+            <div class="logo">
+                <span class="logo-text">SG</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#business-cases" class="nav-link">Business Cases</a>
+                <a href="#course-reflection" class="nav-link">Course Reflection</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Siddarth Gaikwad</h1>
-                    <p class="subtitle">Technology Enthusiast & Problem Solver</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="primary-btn">Get in Touch</a>
-                        <a href="#projects" class="secondary-btn">View Projects</a>
+                    <h1 class="hero-title">Hi, I'm Siddarth Gaikwad</h1>
+                    <p class="hero-subtitle">Technology Enthusiast & Problem Solver</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <!-- Placeholder for profile image -->
-                    <div class="profile-placeholder"></div>
+                    <div class="profile-image"></div>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Waste Water Management</h3>
-                            <p>Innovative solutions for urban water management in Mumbai, focusing on sustainable practices and efficient distribution systems.</p>
-                            <div class="project-tags">
-                                <span>Environmental</span>
-                                <span>Urban Planning</span>
-                                <span>Sustainability</span>
-                            </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Waste Water Management</h3>
+                        <p class="project-description">
+                            Innovative solutions for urban water management in Mumbai, focusing on sustainable practices and efficient distribution systems.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Environmental</span>
+                            <span class="tag">Urban Planning</span>
+                            <span class="tag">Sustainability</span>
                         </div>
+                        <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Mumbai Water Ecosystem</h3>
-                            <p>Comprehensive solution for improving water quality and accessibility for Mumbai residents through smart technology integration.</p>
-                            <div class="project-tags">
-                                <span>Smart City</span>
-                                <span>Infrastructure</span>
-                                <span>Tech</span>
-                            </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Mumbai Water Ecosystem</h3>
+                        <p class="project-description">
+                            Comprehensive solution for improving water quality and accessibility for Mumbai residents through smart technology integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Smart City</span>
+                            <span class="tag">Infrastructure</span>
+                            <span class="tag">Tech</span>
                         </div>
+                        <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2 class="section-title">Technical Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Programming</h3>
-                        <ul>
-                            <li>C++</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                        </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="skill-card">
-                        <h3>Web Development</h3>
-                        <ul>
-                            <li>React.js</li>
-                            <li>Node.js</li>
-                            <li>Full Stack</li>
-                        </ul>
+                    <h3 class="skill-title">Programming</h3>
+                    <ul class="skill-list">
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <div class="skill-card">
-                        <h3>Core CS</h3>
-                        <ul>
-                            <li>Data Structures</li>
-                            <li>Algorithms</li>
-                            <li>Problem Solving</li>
-                        </ul>
+                    <h3 class="skill-title">Web Development</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Full Stack</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
+                    <h3 class="skill-title">Core CS</h3>
+                    <ul class="skill-list">
+                        <li>Data Structures</li>
+                        <li>Algorithms</li>
+                        <li>Problem Solving</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenTech Enterprises: Effluent Reuse & Recycling</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>GreenTech Enterprises: Effluent Reuse & Recycling</h1>
-        
-        <h2>Objective</h2>
-        <p>
-            Effluent reuse and recycling focus on the efficient management of wastewater to reclaim and reuse it, minimizing waste and reducing environmental impact. This often involves determining optimal pathways and systems for water flow and treatment.
-        </p>
+        </div>
+    </section>
 
-        <h2>Approach: Graph-Based Optimization and Traversal</h2>
+    <script>
+        // Navigation toggle
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+            this.classList.toggle('active');
+        });
 
-        <h3>Graph Representation</h3>
-        <p>The wastewater treatment and recycling system can be represented as a graph:</p>
-        <ul>
-            <li><strong>Nodes:</strong> Represent key components (e.g., treatment plants, storage tanks, or end-use points).</li>
-            <li><strong>Edges:</strong> Represent pipelines, flow connections, or pathways where water is transferred.</li>
-        </ul>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-        <h3>Graph Traversal Algorithms</h3>
-        <ul>
-            <li><strong>BFS (Breadth-First Search):</strong>
-                <ul>
-                    <li>Used to find the shortest path in an unweighted graph (e.g., identifying the quickest way to transport water between two points).</li>
-                    <li>Helps explore all connections level by level, ensuring no pathway is missed.</li>
-                </ul>
-            </li>
-            <li><strong>DFS (Depth-First Search):</strong>
-                <ul>
-                    <li>Useful for exploring deeper pathways, such as determining all possible routes for water flow from a source to multiple destinations.</li>
-                    <li>Can detect cycles, which may represent potential inefficiencies or feedback loops in the system.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>Hashing</h3>
-        <p>Hashing is used to efficiently store and retrieve data about nodes and edges:</p>
-        <ul>
-            <li>Mapping node IDs to their attributes (e.g., capacity of a treatment plant or flow rates).</li>
-            <li>Tracking visited nodes during traversal to avoid redundant processing.</li>
-        </ul>
-
-        <h2>Applications</h2>
-        <ul>
-            <li><strong>Optimization of Water Flow:</strong> Determine the most efficient pathways for recycling and reuse, minimizing energy or cost.</li>
-            <li><strong>Cycle Detection:</strong> Avoid loops that may cause inefficiencies in the recycling process.</li>
-            <li><strong>Capacity Planning:</strong> Analyze and manage the capacity of treatment plants or pipelines to prevent bottlenecks.</li>
-        </ul>
-
-        <h2>Benefits</h2>
-        <ul>
-            <li>Improved efficiency in water reuse processes.</li>
-            <li>Reduction in environmental impact through optimized resource management.</li>
-            <li>Enhanced decision-making using algorithmic insights into complex systems.</li>
-        </ul>
-    </div>
-</body>
-</html>
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wastewater Management C++ Code</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            color: #2a7a7a;
-        }
-        pre {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Wastewater Management C++ Code</h1>
-    <p>
-        Below is the C++ code for simulating wastewater management using graph-based traversal techniques like BFS and DFS.
-    </p>
-    <pre><code>
-#include &lt;iostream&gt;
-#include &lt;unordered_map&gt;
-#include &lt;vector&gt;
-#include &lt;queue&gt;
-#include &lt;set&gt;
-#include &lt;stack&gt;
-
-using namespace std;
-
-class WastewaterGraph {
-private:
-    unordered_map&lt;string, vector&lt;string&gt;&gt; graph;
-
-public:
-    // Add a pipeline (edge) between two components (nodes)
-    void addConnection(const string&amp; source, const string&amp; destination) {
-        graph[source].push_back(destination);
-    }
-
-    // Breadth-First Search (BFS) to find paths
-    void bfs(const string&amp; start) {
-        cout &lt;&lt; "BFS Traversal:" &lt;&lt; endl;
-
-        set&lt;string&gt; visited;         // To track visited nodes
-        queue&lt;string&gt; q;             // Queue for BFS
-        unordered_map&lt;string, vector&lt;string&gt;&gt; paths; // To store paths
-
-        q.push(start);
-        paths[start] = {start};
-
-        while (!q.empty()) {
-            string current = q.front();
-            q.pop();
-
-            if (visited.find(current) == visited.end()) {
-                visited.insert(current);
-                cout &lt;&lt; "Visited: " &lt;&lt; current &lt;&lt; endl;
-
-                for (const auto&amp; neighbor : graph[current]) {
-                    if (visited.find(neighbor) == visited.end()) {
-                        q.push(neighbor);
-                        // Build the path to this neighbor
-                        paths[neighbor] = paths[current];
-                        paths[neighbor].push_back(neighbor);
-                    }
+        // Active section highlighting
+        window.addEventListener('scroll', function() {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
                 }
-            }
-        }
+            });
 
-        // Display paths from the start node
-        cout &lt;&lt; "\nPaths using BFS:" &lt;&lt; endl;
-        for (const auto&amp; path : paths) {
-            cout &lt;&lt; "Path to " &lt;&lt; path.first &lt;&lt; ": ";
-            for (const auto&amp; node : path.second) {
-                cout &lt;&lt; node &lt;&lt; " ";
-            }
-            cout &lt;&lt; endl;
-        }
-    }
-
-    // Depth-First Search (DFS) for deeper traversal
-    void dfs(const string&amp; start) {
-        cout &lt;&lt; "\nDFS Traversal:" &lt;&lt; endl;
-
-        set&lt;string&gt; visited;         // To track visited nodes
-        vector&lt;string&gt; path;         // Store DFS path
-
-        // Helper function for recursive DFS
-        function&lt;void(const string&amp;)&gt; dfsHelper = [&](const string&amp; node) {
-            visited.insert(node);
-            path.push_back(node);
-            cout &lt;&lt; "Visited: " &lt;&lt; node &lt;&lt; endl;
-
-            for (const auto&amp; neighbor : graph[node]) {
-                if (visited.find(neighbor) == visited.end()) {
-                    dfsHelper(neighbor);
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
                 }
-            }
-        };
-
-        dfsHelper(start);
-
-        // Display full DFS path
-        cout &lt;&lt; "\nDFS Path: ";
-        for (const auto&amp; node : path) {
-            cout &lt;&lt; node &lt;&lt; " ";
-        }
-        cout &lt;&lt; endl;
-    }
-};
-
-int main() {
-    WastewaterGraph wg;
-
-    // Add connections (pipelines)
-    wg.addConnection("Source", "Treatment Plant A");
-    wg.addConnection("Source", "Treatment Plant B");
-    wg.addConnection("Treatment Plant A", "Reservoir");
-    wg.addConnection("Treatment Plant B", "Reservoir");
-    wg.addConnection("Reservoir", "Reuse Facility");
-    wg.addConnection("Reuse Facility", "End User");
-
-    // Perform BFS
-    wg.bfs("Source");
-
-    // Perform DFS
-    wg.dfs("Source");
-
-    return 0;
-}
-    </code></pre>
-</body>
-</html>
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaterGuard Solutions: Real-Time Data Analytics</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>WaterGuard Solutions: Real-Time Data Analytics for Wastewater Systems</h1>
-        
-        <h2>Overview</h2>
-        <p>
-            Real-time data analytics for wastewater systems involves continuously monitoring, processing, and analyzing data from sensors, pumps, and treatment systems. The goal is to quickly respond to anomalies, optimize operations, and ensure system reliability. Using data structures like arrays, stacks, and queues provides efficient ways to manage this real-time processing.
-        </p>
-
-        <h2>Real-Time Processing with Arrays, Stacks, and Queues</h2>
-
-        <h3>1. Arrays: Fast Access to Sensor Data</h3>
-        <p><strong>What It Does:</strong> An array is a simple data structure used to store a collection of data (e.g., sensor readings such as pH, temperature, or flow rate).</p>
-        <p><strong>Why It’s Used:</strong> Provides fast access to any sensor reading by index, making it easy to analyze recent data or historical trends.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Storing the latest 1,000 readings from sensors for quick visualization or analysis.</p>
-
-        <h3>2. Stacks: Event Management and Undo Operations</h3>
-        <p><strong>What It Does:</strong> A stack follows the Last In, First Out (LIFO) principle, where the last item added is the first to be removed.</p>
-        <p><strong>Why It’s Used:</strong> Useful for backtracking or undo operations in event management.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Logging and undoing actions, such as:</p>
-        <ul>
-            <li>"Sensor calibration started."</li>
-            <li>"Flow rate anomaly detected."</li>
-            <li>"Calibration reverted."</li>
-        </ul>
-
-        <h3>3. Queues: Handling Data Streams</h3>
-        <p><strong>What It Does:</strong> A queue follows the First In, First Out (FIFO) principle, ensuring data is processed in the order it was received.</p>
-        <p><strong>Why It’s Used:</strong> Real-time processing requires managing continuous data streams efficiently. A queue buffers incoming data from sensors to ensure smooth processing.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Processing sensor data sequentially, such as:</p>
-        <ul>
-            <li>pH level at time <code>t1</code>.</li>
-            <li>Flow rate at time <code>t2</code>.</li>
-            <li>Contamination level at time <code>t3</code>.</li>
-        </ul>
-
-        <h2>How These Data Structures Work Together</h2>
-        <ul>
-            <li><strong>Array:</strong> Collects and stores data for batch analysis or periodic processing.<br>Example: Store hourly average pH values in an array for later reporting.</li>
-            <li><strong>Stack:</strong> Manages system events or actions.<br>Example: Logging a sequence of actions for event tracing or undoing erroneous steps.</li>
-            <li><strong>Queue:</strong> Handles real-time data streams, ensuring that data is processed as it arrives.<br>Example: Sensor data is pushed into the queue, processed one by one, and then removed.</li>
-        </ul>
-
-        <h2>Applications in Real-Time Wastewater Systems</h2>
-        <ul>
-            <li><strong>Anomaly Detection:</strong>
-                <ul>
-                    <li><strong>Arrays:</strong> Compare new sensor data against stored thresholds.</li>
-                    <li><strong>Stacks:</strong> Log detected anomalies and corrective actions.</li>
-                    <li><strong>Queues:</strong> Process incoming data streams to detect anomalies in real time.</li>
-                </ul>
-            </li>
-            <li><strong>System Optimization:</strong>
-                <ul>
-                    <li><strong>Arrays:</strong> Store and analyze historical data for pattern recognition.</li>
-                    <li><strong>Stacks:</strong> Revert optimization steps during testing or failures.</li>
-                    <li><strong>Queues:</strong> Continuously feed operational data for optimization models.</li>
-                </ul>
-            </li>
-            <li><strong>Event Handling:</strong>
-                <ul>
-                    <li><strong>Arrays:</strong> Hold a record of all events for reporting.</li>
-                    <li><strong>Stacks:</strong> Undo the last few actions during troubleshooting.</li>
-                    <li><strong>Queues:</strong> Prioritize event resolution based on urgency.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h2>Alignment with SDG</h2>
-        <p><strong>SDG 11:</strong> Sustainable Cities and Communities</p>
-        <p>
-            Real-time data analytics supports sustainable urban development by optimizing wastewater management, reducing environmental impact, and enhancing the efficiency of water treatment systems.
-        </p>
-    </div>
-</body>
-</html>
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Data Processing Code</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            color: #2a7a7a;
-        }
-        pre {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Real-Time Data Processing Code</h1>
-    <p>
-        Below is the C++ code for simulating real-time data analytics using arrays, stacks, and queues for wastewater management.
-    </p>
-    <pre><code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;stack&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-
-// Simulate real-time data processing for wastewater analytics
-class RealTimeAnalytics {
-private:
-    vector&lt;double&gt; sensorData; // Array for storing sensor readings
-    stack&lt;string&gt; eventStack; // Stack for event management
-    queue&lt;double&gt; dataQueue;  // Queue for real-time data processing
-
-public:
-    // Add new sensor reading (real-time data)
-    void addSensorData(double data) {
-        sensorData.push_back(data);
-        dataQueue.push(data);
-    }
-
-    // Simulate an event and store it in the stack
-    void logEvent(const string&amp; event) {
-        eventStack.push(event);
-        cout &lt;&lt; "Event logged: " &lt;&lt; event &lt;&lt; endl;
-    }
-
-    // Process data in the queue (FIFO order)
-    void processQueue() {
-        cout &lt;&lt; "\nProcessing data queue:" &lt;&lt; endl;
-        while (!dataQueue.empty()) {
-            double data = dataQueue.front();
-            dataQueue.pop();
-            cout &lt;&lt; "Processed data: " &lt;&lt; data &lt;&lt; endl;
-        }
-    }
-
-    // Undo the last logged event using the stack
-    void undoLastEvent() {
-        if (!eventStack.empty()) {
-            cout &lt;&lt; "\nUndoing event: " &lt;&lt; eventStack.top() &lt;&lt; endl;
-            eventStack.pop();
-        } else {
-            cout &lt;&lt; "\nNo events to undo." &lt;&lt; endl;
-        }
-    }
-
-    // Display all sensor data stored in the array
-    void displaySensorData() {
-        cout &lt;&lt; "\nSensor Data (Array): ";
-        for (double data : sensorData) {
-            cout &lt;&lt; data &lt;&lt; " ";
-        }
-        cout &lt;&lt; endl;
-    }
-};
-
-int main() {
-    RealTimeAnalytics analytics;
-
-    // Simulate real-time sensor readings
-    analytics.addSensorData(7.5);
-    analytics.addSensorData(6.8);
-    analytics.addSensorData(7.2);
-
-    // Log events
-    analytics.logEvent("Sensor calibration");
-    analytics.logEvent("Anomaly detected");
-    
-    // Display all sensor data
-    analytics.displaySensorData();
-
-    // Process queued data
-    analytics.processQueue();
-
-    // Undo the last event
-    analytics.undoLastEvent();
-
-    // Undo another event
-    analytics.undoLastEvent();
-
-    return 0;
-}
-    </code></pre>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoSmart Solutions: Sustainable Wastewater Management</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #2a7a7a;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #e0f7f7;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>EcoSmart Solutions: Sustainable Wastewater Management Infrastructure</h1>
-        
-        <h2>Objective</h2>
-        <p>
-            To optimize wastewater management systems using advanced computational techniques like Dynamic Programming, Graphs, and Greedy Algorithms. These methods ensure efficient resource allocation, minimal operational costs, and sustainable handling of wastewater.
-        </p>
-
-        <h2>Key Techniques and Their Applications</h2>
-
-        <h3>1. Dynamic Programming (DP)</h3>
-        <p><strong>What It Is:</strong> A technique used to solve problems by breaking them into smaller overlapping subproblems, solving each subproblem once, and reusing their solutions.</p>
-        <p><strong>Relevance to Wastewater Management:</strong></p>
-        <ul>
-            <li>Optimizing resource usage such as energy for pumps or chemicals for treatment.</li>
-            <li>Finding the most efficient scheduling of treatment processes.</li>
-        </ul>
-        <p><strong>Example Application:</strong> Minimizing the cost of transporting wastewater through different pipelines to treatment plants, where costs depend on distance and flow.</p>
-
-        <h3>2. Graphs</h3>
-        <p><strong>What It Is:</strong> A mathematical structure used to model a network where nodes represent entities (e.g., treatment plants, reservoirs) and edges represent connections (e.g., pipelines).</p>
-        <p><strong>Relevance to Wastewater Management:</strong></p>
-        <ul>
-            <li>Used to model the flow of wastewater across interconnected pipelines and facilities.</li>
-            <li>Enables system mapping for identifying bottlenecks and optimizing pathways.</li>
-        </ul>
-        <p><strong>Example Application:</strong> Representing the network of treatment plants and pipelines as a graph, then finding the shortest or most efficient path for wastewater flow.</p>
-
-        <h3>3. Greedy Algorithms</h3>
-        <p><strong>What It Is:</strong> A method that makes locally optimal decisions at each step, aiming to find a global optimum.</p>
-        <p><strong>Relevance to Wastewater Management:</strong></p>
-        <ul>
-            <li>Used for problems like resource allocation or pipeline maintenance prioritization.</li>
-            <li>Provides quick, approximate solutions to problems requiring real-time decisions.</li>
-        </ul>
-        <p><strong>Example Application:</strong> Selecting the most critical pipelines to repair with limited resources, ensuring maximum impact with minimum cost.</p>
-
-        <h2>Example Problem: Optimizing Wastewater Flow</h2>
-        <p>
-            A wastewater management system consists of multiple treatment plants connected by pipelines. Each pipeline has a capacity and an associated cost. The goal is to maximize the flow of wastewater from source to sink while minimizing the operational cost.
-        </p>
-
-        <h3>Step-by-Step Explanation of Techniques</h3>
-        <ul>
-            <li><strong>Graph Representation:</strong>
-                <ul>
-                    <li>Nodes: Treatment plants, reservoirs, or source/sink points.</li>
-                    <li>Edges: Pipelines with capacities and costs.</li>
-                </ul>
-            </li>
-            <li><strong>Dynamic Programming:</strong>
-                <ul>
-                    <li>Use to find the maximum flow through the network by solving subproblems.</li>
-                    <li>Store intermediate results to avoid redundant calculations.</li>
-                </ul>
-            </li>
-            <li><strong>Greedy Approach:</strong>
-                <ul>
-                    <li>Apply for tasks like choosing the lowest-cost pipelines first to minimize overall cost while maintaining flow requirements.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h2>Applications of These Techniques</h2>
-        <ul>
-            <li><strong>Optimized Flow Management:</strong> Use graph algorithms to identify the most efficient paths for wastewater flow. Ensure minimal energy usage and cost by prioritizing optimal routes.</li>
-            <li><strong>Resource Allocation:</strong> Use greedy algorithms to allocate limited resources like repair crews or chemicals. Focus resources where they provide the highest impact.</li>
-            <li><strong>Scheduling and Planning:</strong> Use dynamic programming to create efficient schedules for treatment processes or pumping operations.</li>
-        </ul>
-
-        <h2>Why These Techniques Are Ideal for the Problem</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Technique</th>
-                    <th>Strength</th>
-                    <th>Example Use Case</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dynamic Programming</td>
-                    <td>Solves optimization problems with overlapping subproblems.</td>
-                    <td>Optimizing treatment schedules to minimize operational costs.</td>
-                </tr>
-                <tr>
-                    <td>Graphs</td>
-                    <td>Models complex systems with interconnected components.</td>
-                    <td>Mapping wastewater pipelines to identify efficient pathways.</td>
-                </tr>
-                <tr>
-                    <td>Greedy Algorithms</td>
-                    <td>Provides fast, approximate solutions for large problems.</td>
-                    <td>Prioritizing critical repairs in a resource-constrained scenario.</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Benefits of This Approach</h2>
-        <ul>
-            <li><strong>Sustainability:</strong> Reduces energy and chemical usage, promoting sustainable practices.</li>
-            <li><strong>Cost-Effectiveness:</strong> Minimizes operational costs through efficient resource allocation.</li>
-            <li><strong>Scalability:</strong> Can be applied to both small and large wastewater management systems.</li>
-        </ul>
-    </div>
-</body>
-</html>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min-Cost Max-Flow Algorithm Code</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #2a7a7a;
-        }
-        pre {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Min-Cost Max-Flow Algorithm Code</h1>
-    <p>
-        Below is the C++ implementation of the Min-Cost Max-Flow algorithm, designed for optimizing wastewater management systems.
-    </p>
-    <pre><code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;queue&gt;
-#include &lt;climits&gt;
-
-using namespace std;
-
-// Structure to represent an edge in the graph
-struct Edge {
-    int to, capacity, cost, reverse;
-};
-
-// Class to represent the wastewater network
-class WastewaterNetwork {
-private:
-    int nodes;
-    vector&lt;vector&lt;Edge&gt;&gt; graph;
-
-public:
-    WastewaterNetwork(int n) : nodes(n) {
-        graph.resize(n);
-    }
-
-    // Add edge with capacity and cost
-    void addEdge(int from, int to, int capacity, int cost) {
-        graph[from].push_back({to, capacity, cost, (int)graph[to].size()});
-        graph[to].push_back({from, 0, -cost, (int)graph[from].size() - 1});
-    }
-
-    // Min-Cost Max-Flow Algorithm
-    pair&lt;int, int&gt; minCostMaxFlow(int source, int sink) {
-        int maxFlow = 0, minCost = 0;
-        vector&lt;int&gt; dist, parent, parentEdge;
-
-        while (true) {
-            dist.assign(nodes, INT_MAX);
-            parent.assign(nodes, -1);
-            parentEdge.assign(nodes, -1);
-            vector&lt;bool&gt; inQueue(nodes, false);
-            queue&lt;int&gt; q;
-
-            dist[source] = 0;
-            q.push(source);
-            inQueue[source] = true;
-
-            // Bellman-Ford Algorithm to find the shortest path
-            while (!q.empty()) {
-                int u = q.front();
-                q.pop();
-                inQueue[u] = false;
-
-                for (int i = 0; i &lt; graph[u].size(); ++i) {
-                    Edge &e = graph[u][i];
-                    if (e.capacity &gt; 0 &amp;&amp; dist[u] + e.cost &lt; dist[e.to]) {
-                        dist[e.to] = dist[u] + e.cost;
-                        parent[e.to] = u;
-                        parentEdge[e.to] = i;
-                        if (!inQueue[e.to]) {
-                            q.push(e.to);
-                            inQueue[e.to] = true;
-                        }
-                    }
-                }
-            }
-
-            // If no path to sink, terminate
-            if (dist[sink] == INT_MAX) break;
-
-            // Find the maximum flow along the path
-            int flow = INT_MAX;
-            for (int v = sink; v != source; v = parent[v]) {
-                Edge &e = graph[parent[v]][parentEdge[v]];
-                flow = min(flow, e.capacity);
-            }
-
-            // Update capacities and calculate cost
-            for (int v = sink; v != source; v = parent[v]) {
-                Edge &e = graph[parent[v]][parentEdge[v]];
-                e.capacity -= flow;
-                graph[v][e.reverse].capacity += flow;
-                minCost += flow * e.cost;
-            }
-
-            maxFlow += flow;
-        }
-
-        return {maxFlow, minCost};
-    }
-};
-
-int main() {
-    int nodes = 6;  // Number of nodes
-    WastewaterNetwork network(nodes);
-
-    // Add edges (from, to, capacity, cost)
-    network.addEdge(0, 1, 10, 2);  // Source to Node 1
-    network.addEdge(0, 2, 8, 4);   // Source to Node 2
-    network.addEdge(1, 3, 5, 1);   // Node 1 to Node 3
-    network.addEdge(2, 3, 7, 2);   // Node 2 to Node 3
-    network.addEdge(1, 4, 6, 2);   // Node 1 to Node 4
-    network.addEdge(3, 5, 15, 3);  // Node 3 to Sink
-    network.addEdge(4, 5, 8, 1);   // Node 4 to Sink
-
-    // Source and sink
-    int source = 0, sink = 5;
-
-    // Calculate minimum cost and maximum flow
-    auto result = network.minCostMaxFlow(source, sink);
-
-    cout &lt;&lt; "Maximum Flow: " &lt;&lt; result.first &lt;&lt; endl;
-    cout &lt;&lt; "Minimum Cost: " &lt;&lt; result.second &lt;&lt; endl;
-
-    return 0;
-}
-    </code></pre>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAA Lab Reflections</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        .challenge, .solution, .example {
-            margin-left: 20px;
-        }
-        .example {
-            color: #3498db;
-        }
-    </style>
-</head>
-<body>
-    <h1>DAA Lab Reflections</h1>
-    
-    <div class="section">
-        <h2>1. Challenges in Learning/Understanding the Above Concepts</h2>
-        
-        <h3>Time Complexity Analysis</h3>
-        <div class="challenge">Challenge: Difficulty in understanding the mathematical derivations behind time complexity and Big-O notation for nested loops or recursive algorithms.</div>
-        <div class="solution">Solution: Practice with step-by-step tracing of algorithms and solving problems to develop an intuitive grasp.</div>
-        
-        <h3>Binary Search Tree (BST)</h3>
-        <div class="challenge">Challenge: Understanding edge cases such as handling duplicate values and deletion of nodes with two children.</div>
-        <div class="solution">Solution: Visual tools or simulators can help illustrate insertions, deletions, and traversal operations.</div>
-        
-        <h3>DFS and BFS</h3>
-        <div class="challenge">Challenge: Grasping the implementation differences and their impact on solving problems, especially with cyclic or weighted graphs.</div>
-        <div class="solution">Solution: Hands-on coding of examples such as mazes or network analysis to internalize the concepts.</div>
-        
-        <h3>Heap</h3>
-        <div class="challenge">Challenge: Comprehending how heaps maintain their structure dynamically during insertions and deletions.</div>
-        <div class="solution">Solution: Writing manual examples and debugging heap implementations in code.</div>
-        
-        <h3>Sorting Algorithms</h3>
-        <div class="challenge">Challenge: Distinguishing between the trade-offs of various sorting algorithms (e.g., stability, memory usage, and time complexity).</div>
-        <div class="solution">Solution: Comparing real-world datasets and observing sorting performance.</div>
-        
-        <h3>Pattern Searching</h3>
-        <div class="challenge">Challenge: Understanding advanced techniques like the Knuth-Morris-Pratt (KMP) or Boyer-Moore algorithm due to complex preprocessing steps.</div>
-        <div class="solution">Solution: Breaking down algorithms into small, digestible steps with worked-out examples.</div>
-        
-        <h3>Graph Algorithms</h3>
-        <div class="challenge">Challenge: Understanding complex algorithms like Dijkstra's or Floyd-Warshall for shortest paths, and their application in weighted and directed graphs.</div>
-        <div class="solution">Solution: Applying graph algorithms to solve real-world scenarios, such as routing problems or network analysis.</div>
-    </div>
-
-    <div class="section">
-        <h2>2. Challenges in Correlating with Real-World Applications</h2>
-        
-        <h3>Time Complexity Analysis</h3>
-        <div class="challenge">Challenge: Connecting abstract notations to practical performance impacts in real-world systems with hardware constraints.</div>
-        <div class="example">Example: Relating Big-O to database query optimizations.</div>
-        
-        <h3>Binary Search Tree (BST)</h3>
-        <div class="challenge">Challenge: Identifying scenarios where BST is the optimal data structure over alternatives like hash tables.</div>
-        <div class="example">Example: Using BSTs for dynamic sets and searching with ordered data.</div>
-        
-        <h3>DFS and BFS</h3>
-        <div class="challenge">Challenge: Applying them to large-scale, real-world graphs like social networks or transportation maps.</div>
-        <div class="example">Example: Using BFS for finding the shortest path in unweighted graphs (e.g., urban navigation).</div>
-        
-        <h3>Heap</h3>
-        <div class="challenge">Challenge: Mapping heap usage to practical needs like implementing priority queues in real-time systems.</div>
-        <div class="example">Example: Using heaps in task schedulers or memory allocation.</div>
-        
-        <h3>Sorting Algorithms</h3>
-        <div class="challenge">Challenge: Recognizing when to use specific sorting methods in large-scale datasets or distributed systems.</div>
-        <div class="example">Example: Choosing Merge Sort in distributed systems where divide-and-conquer strategies are advantageous.</div>
-        
-        <h3>Pattern Searching</h3>
-        <div class="challenge">Challenge: Relating algorithm outputs to text or DNA sequence analysis in bioinformatics.</div>
-        <div class="example">Example: Using KMP for searching large genomes efficiently.</div>
-        
-        <h3>Graph Algorithms</h3>
-        <div class="challenge">Challenge: Applying abstract algorithms to diverse fields such as logistics, network security, or AI.</div>
-        <div class="example">Example: Using Dijkstra’s algorithm for routing packets in computer networks.</div>
-    </div>
-
-    <div class="section">
-        <h2>3. Determining the Most Efficient Approach/Design Techniques</h2>
-        
-        <h3>Time Complexity Analysis</h3>
-        <div class="solution">Use mathematical modeling to compare multiple algorithms and test them on real-world datasets for practical benchmarks.</div>
-        
-        <h3>Binary Search Tree (BST)</h3>
-        <div class="solution">Evaluate the need for balanced trees (e.g., AVL or Red-Black Trees) when frequent updates are expected.</div>
-        
-        <h3>DFS and BFS</h3>
-        <div class="solution">Choose DFS for exhaustive exploration problems (e.g., backtracking) and BFS for level-order or shortest-path problems in unweighted graphs.</div>
-        
-        <h3>Heap</h3>
-        <div class="solution">Use heaps when priority management is critical, as in scheduling or queue management.</div>
-        
-        <h3>Sorting Algorithms</h3>
-        <div class="solution">Select sorting methods based on data size, memory constraints, and stability requirements (e.g., Quick Sort for in-place sorting, Merge Sort for stability).</div>
-        
-        <h3>Pattern Searching</h3>
-        <div class="solution">Use preprocessing-heavy algorithms like KMP or Boyer-Moore for repeated searches in static text; simple brute force suffices for small datasets.</div>
-        
-        <h3>Graph Algorithms</h3>
-        <div class="solution">Analyze the graph properties (e.g., sparse vs dense) and constraints (e.g., weighted vs unweighted) to pick appropriate algorithms like Kruskal’s for MST or Bellman-Ford for negative-weight edges.</div>
-    </div>
-</body>
-</html>
-
-
-
-
-       
-</body>
-</html>
-    </footer>
+            });
+        });
+    </script>
 </body>
 </html>
