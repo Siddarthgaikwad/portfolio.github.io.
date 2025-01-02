@@ -896,116 +896,133 @@ int main() {
     </code></pre>
 </body>
 </html>
-
-
-
-
-       <section id="course-reflection" class="section course-reflection-section">
-            <div class="container">
-                <h2 class="section-title">Course Reflection</h2>
-                <div class="reflection-content">
-                    <h3>Reflective Insights on Problem Solving</h3>
-                    <ul>
-                        <li><strong>How do you determine the most efficient approach when solving a complex problem?</strong>  
-                            The approach depends on analyzing time complexity, space complexity, and constraints of the problem. I compare various algorithms and pick the most optimized one based on the given requirements.
-
-                            <h4>Example (Sorting with Merge Sort):</h4>
-                            <pre><code>
-function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
-    let mid = Math.floor(arr.length / 2);
-    let left = mergeSort(arr.slice(0, mid));
-    let right = mergeSort(arr.slice(mid));
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA Lab Reflections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .challenge, .solution, .example {
+            margin-left: 20px;
+        }
+        .example {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>DAA Lab Reflections</h1>
     
-    return merge(left, right);
-}
+    <div class="section">
+        <h2>1. Challenges in Learning/Understanding the Above Concepts</h2>
+        
+        <h3>Time Complexity Analysis</h3>
+        <div class="challenge">Challenge: Difficulty in understanding the mathematical derivations behind time complexity and Big-O notation for nested loops or recursive algorithms.</div>
+        <div class="solution">Solution: Practice with step-by-step tracing of algorithms and solving problems to develop an intuitive grasp.</div>
+        
+        <h3>Binary Search Tree (BST)</h3>
+        <div class="challenge">Challenge: Understanding edge cases such as handling duplicate values and deletion of nodes with two children.</div>
+        <div class="solution">Solution: Visual tools or simulators can help illustrate insertions, deletions, and traversal operations.</div>
+        
+        <h3>DFS and BFS</h3>
+        <div class="challenge">Challenge: Grasping the implementation differences and their impact on solving problems, especially with cyclic or weighted graphs.</div>
+        <div class="solution">Solution: Hands-on coding of examples such as mazes or network analysis to internalize the concepts.</div>
+        
+        <h3>Heap</h3>
+        <div class="challenge">Challenge: Comprehending how heaps maintain their structure dynamically during insertions and deletions.</div>
+        <div class="solution">Solution: Writing manual examples and debugging heap implementations in code.</div>
+        
+        <h3>Sorting Algorithms</h3>
+        <div class="challenge">Challenge: Distinguishing between the trade-offs of various sorting algorithms (e.g., stability, memory usage, and time complexity).</div>
+        <div class="solution">Solution: Comparing real-world datasets and observing sorting performance.</div>
+        
+        <h3>Pattern Searching</h3>
+        <div class="challenge">Challenge: Understanding advanced techniques like the Knuth-Morris-Pratt (KMP) or Boyer-Moore algorithm due to complex preprocessing steps.</div>
+        <div class="solution">Solution: Breaking down algorithms into small, digestible steps with worked-out examples.</div>
+        
+        <h3>Graph Algorithms</h3>
+        <div class="challenge">Challenge: Understanding complex algorithms like Dijkstra's or Floyd-Warshall for shortest paths, and their application in weighted and directed graphs.</div>
+        <div class="solution">Solution: Applying graph algorithms to solve real-world scenarios, such as routing problems or network analysis.</div>
+    </div>
 
-function merge(left, right) {
-    let result = [], i = 0, j = 0;
-    while (i < left.length && j < right.length) {
-        if (left[i] < right[j]) result.push(left[i++]);
-        else result.push(right[j++]);
-    }
-    return result.concat(left.slice(i)).concat(right.slice(j));
-}
+    <div class="section">
+        <h2>2. Challenges in Correlating with Real-World Applications</h2>
+        
+        <h3>Time Complexity Analysis</h3>
+        <div class="challenge">Challenge: Connecting abstract notations to practical performance impacts in real-world systems with hardware constraints.</div>
+        <div class="example">Example: Relating Big-O to database query optimizations.</div>
+        
+        <h3>Binary Search Tree (BST)</h3>
+        <div class="challenge">Challenge: Identifying scenarios where BST is the optimal data structure over alternatives like hash tables.</div>
+        <div class="example">Example: Using BSTs for dynamic sets and searching with ordered data.</div>
+        
+        <h3>DFS and BFS</h3>
+        <div class="challenge">Challenge: Applying them to large-scale, real-world graphs like social networks or transportation maps.</div>
+        <div class="example">Example: Using BFS for finding the shortest path in unweighted graphs (e.g., urban navigation).</div>
+        
+        <h3>Heap</h3>
+        <div class="challenge">Challenge: Mapping heap usage to practical needs like implementing priority queues in real-time systems.</div>
+        <div class="example">Example: Using heaps in task schedulers or memory allocation.</div>
+        
+        <h3>Sorting Algorithms</h3>
+        <div class="challenge">Challenge: Recognizing when to use specific sorting methods in large-scale datasets or distributed systems.</div>
+        <div class="example">Example: Choosing Merge Sort in distributed systems where divide-and-conquer strategies are advantageous.</div>
+        
+        <h3>Pattern Searching</h3>
+        <div class="challenge">Challenge: Relating algorithm outputs to text or DNA sequence analysis in bioinformatics.</div>
+        <div class="example">Example: Using KMP for searching large genomes efficiently.</div>
+        
+        <h3>Graph Algorithms</h3>
+        <div class="challenge">Challenge: Applying abstract algorithms to diverse fields such as logistics, network security, or AI.</div>
+        <div class="example">Example: Using Dijkstra’s algorithm for routing packets in computer networks.</div>
+    </div>
 
-console.log(mergeSort([5, 3, 8, 4, 2]));
-                            </code></pre>
-                        </li>
-                        <li><strong>Reflect on a situation where you need to balance multiple conflicting constraints in a design.</strong>  
-                            When designing a system with limited resources, I prioritized critical features first while ensuring non-essential components remained functional, adopting a trade-off strategy to maximize the system’s efficiency.
+    <div class="section">
+        <h2>3. Determining the Most Efficient Approach/Design Techniques</h2>
+        
+        <h3>Time Complexity Analysis</h3>
+        <div class="solution">Use mathematical modeling to compare multiple algorithms and test them on real-world datasets for practical benchmarks.</div>
+        
+        <h3>Binary Search Tree (BST)</h3>
+        <div class="solution">Evaluate the need for balanced trees (e.g., AVL or Red-Black Trees) when frequent updates are expected.</div>
+        
+        <h3>DFS and BFS</h3>
+        <div class="solution">Choose DFS for exhaustive exploration problems (e.g., backtracking) and BFS for level-order or shortest-path problems in unweighted graphs.</div>
+        
+        <h3>Heap</h3>
+        <div class="solution">Use heaps when priority management is critical, as in scheduling or queue management.</div>
+        
+        <h3>Sorting Algorithms</h3>
+        <div class="solution">Select sorting methods based on data size, memory constraints, and stability requirements (e.g., Quick Sort for in-place sorting, Merge Sort for stability).</div>
+        
+        <h3>Pattern Searching</h3>
+        <div class="solution">Use preprocessing-heavy algorithms like KMP or Boyer-Moore for repeated searches in static text; simple brute force suffices for small datasets.</div>
+        
+        <h3>Graph Algorithms</h3>
+        <div class="solution">Analyze the graph properties (e.g., sparse vs dense) and constraints (e.g., weighted vs unweighted) to pick appropriate algorithms like Kruskal’s for MST or Bellman-Ford for negative-weight edges.</div>
+    </div>
+</body>
+</html>
 
-                            <h4>Example (Optimizing Space and Time Complexity):</h4>
-                            <pre><code>
-// Time efficient solution
-function findMax(arr) {
-    return Math.max(...arr);
-}
 
-// Space efficient solution
-function findMaxOptimized(arr) {
-    let max = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) max = arr[i];
-    }
-    return max;
-}
-                            </code></pre>
-                        </li>
-                        <li><strong>What criteria do you use to evaluate the effectiveness of a solution?</strong>  
-                            I evaluate a solution by considering correctness, efficiency, maintainability, and simplicity. For instance, the correctness of sorting algorithms can be validated by their ability to handle edge cases and large datasets.
 
-                            <h4>Example (Evaluating Sorting Algorithm):</h4>
-                            <pre><code>
-function isSorted(arr) {
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] < arr[i - 1]) return false;
-    }
-    return true;
-}
 
-console.log(isSorted([1, 2, 3, 4]));  // true
-console.log(isSorted([1, 3, 2, 4]));  // false
-                            </code></pre>
-                        </li>
-                        <li><strong>How can you adapt an existing solution to address a new or unforeseen challenge?</strong>  
-                            Solutions can be adapted by identifying bottlenecks or areas where a new constraint requires optimization, such as adapting a batch-processing algorithm to real-time streaming data.
-
-                            <h4>Example (Adapting Merge Sort to Handle Streaming Data):</h4>
-                            <pre><code>
-// Adapting Merge Sort for real-time updates
-function mergeSortRealTime(arr, newElement) {
-    arr.push(newElement);
-    return mergeSort(arr);
-}
-
-let arr = [2, 5, 1, 8, 7];
-console.log(mergeSortRealTime(arr, 3));  // Sorts after adding 3
-                            </code></pre>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Connect With Me</h2>
-                <div class="social-links">
-                    <a href="https://github.com/Siddarthgaikwad" target="_blank" class="social-btn">GitHub</a>
-                    <a href="https://www.linkedin.com/in/siddarth-gaikwad-169455273" target="_blank" class="social-btn">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <blockquote class="inspiration-quote">
-                "The only way to do great work is to love what you do." – Steve Jobs
-            </blockquote>
-        </div>
-    </footer>
+       
 </body>
 </html>
     </footer>
