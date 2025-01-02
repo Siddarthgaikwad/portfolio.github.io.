@@ -190,6 +190,84 @@ int main() {
     </pre>
 </div>
 
+            <!-- Business Case: WaterGuard Solutions -->
+<section class="business-case">
+    <div class="business-case-card">
+        <h3>WaterGuard Solutions: Real-Time Data Analytics for Wastewater Systems</h3>
+        <p>
+            Real-time data analytics for wastewater systems involves continuously monitoring, processing, and analyzing data from sensors, pumps, and treatment systems. 
+            The goal is to quickly respond to anomalies, optimize operations, and ensure system reliability. 
+            Using data structures like arrays, stacks, and queues provides efficient ways to manage this real-time processing.
+        </p>
+        
+        <h4>Real-Time Processing with Arrays, Stacks, and Queues</h4>
+        
+        <h5>1. Arrays: Fast Access to Sensor Data</h5>
+        <p><strong>What It Does:</strong> An array is a simple data structure used to store a collection of data (e.g., sensor readings such as pH, temperature, or flow rate).</p>
+        <p><strong>Why It’s Used:</strong> Provides fast access to any sensor reading by index, making it easy to analyze recent data or historical trends.</p>
+        <p><strong>Example in Real-Time Analytics:</strong> Storing the latest 1,000 readings from sensors for quick visualization or analysis.</p>
+        
+        <h5>2. Stacks: Event Management and Undo Operations</h5>
+        <p><strong>What It Does:</strong> A stack follows the Last In, First Out (LIFO) principle, where the last item added is the first to be removed.</p>
+        <p><strong>Why It’s Used:</strong> Useful for backtracking or undo operations in event management.</p>
+        <p><strong>Example in Real-Time Analytics:</strong> Logging and undoing actions, such as:
+            <ul>
+                <li>"Sensor calibration started."</li>
+                <li>"Flow rate anomaly detected."</li>
+                <li>"Calibration reverted."</li>
+            </ul>
+        </p>
+        
+        <h5>3. Queues: Handling Data Streams</h5>
+        <p><strong>What It Does:</strong> A queue follows the First In, First Out (FIFO) principle, ensuring data is processed in the order it was received.</p>
+        <p><strong>Why It’s Used:</strong> Real-time processing requires managing continuous data streams efficiently. A queue buffers incoming data from sensors to ensure smooth processing.</p>
+        <p><strong>Example in Real-Time Analytics:</strong> Processing sensor data sequentially, such as:
+            <ul>
+                <li>pH level at time t<sub>1</sub>.</li>
+                <li>Flow rate at time t<sub>2</sub>.</li>
+                <li>Contamination level at time t<sub>3</sub>.</li>
+            </ul>
+        </p>
+        
+        <h4>How These Data Structures Work Together</h4>
+        <ul>
+            <li><strong>Array:</strong> Collects and stores data for batch analysis or periodic processing. 
+                <br><em>Example:</em> Store hourly average pH values in an array for later reporting.</li>
+            <li><strong>Stack:</strong> Manages system events or actions.
+                <br><em>Example:</em> Logging a sequence of actions for event tracing or undoing erroneous steps.</li>
+            <li><strong>Queue:</strong> Handles real-time data streams, ensuring that data is processed as it arrives.
+                <br><em>Example:</em> Sensor data is pushed into the queue, processed one by one, and then removed.</li>
+        </ul>
+        
+        <h4>Applications in Real-Time Wastewater Systems</h4>
+        
+        <ul>
+            <li><strong>Anomaly Detection:</strong>
+                <ul>
+                    <li><strong>Arrays:</strong> Compare new sensor data against stored thresholds.</li>
+                    <li><strong>Stacks:</strong> Log detected anomalies and corrective actions.</li>
+                    <li><strong>Queues:</strong> Process incoming data streams to detect anomalies in real time.</li>
+                </ul>
+            </li>
+            <li><strong>System Optimization:</strong>
+                <ul>
+                    <li><strong>Arrays:</strong> Store and analyze historical data for pattern recognition.</li>
+                    <li><strong>Stacks:</strong> Revert optimization steps during testing or failures.</li>
+                    <li><strong>Queues:</strong> Continuously feed operational data for optimization models.</li>
+                </ul>
+            </li>
+            <li><strong>Event Handling:</strong>
+                <ul>
+                    <li><strong>Arrays:</strong> Hold a record of all events for reporting.</li>
+                    <li><strong>Stacks:</strong> Undo the last few actions during troubleshooting.</li>
+                    <li><strong>Queues:</strong> Prioritize event resolution based on urgency.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
 
         <!-- New Section: Reflections -->
         <section id="reflections" class="section reflections-section">
