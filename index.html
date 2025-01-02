@@ -135,6 +135,136 @@
         </div>
     </div>
 </section>
+        <section id="business-cases" class="section business-cases-section">
+    <div class="container">
+        <h2 class="section-title">Business Cases</h2>
+        <div class="business-cases-grid">
+            <!-- Shinyra Business Case -->
+            <div class="business-case-card">
+                <h3>Shinyra - Online Ornaments Store</h3>
+                <p>Founded Shinyra, an online Shopify-based store focusing on premium handcrafted ornaments. Through targeted marketing and SEO optimization, Shinyra has gained traction in the market and increased sales by 20% within six months.</p>
+                <div class="business-tags">
+                    <span>E-commerce</span>
+                    <span>Marketing</span>
+                    <span>Retail</span>
+                </div>
+            </div>
+
+            <!-- GreenTech Enterprises Business Case -->
+            <div class="business-case-card">
+                <h3>GreenTech Enterprises: Effluent Reuse & Recycling</h3>
+                <p>Effluent reuse and recycling focus on the efficient management of wastewater to reclaim and reuse it, minimizing waste and reducing environmental impact. This involves graph-based optimization techniques to determine optimal pathways and systems for water flow and treatment.</p>
+                <p><strong>Approach:</strong> Graph-based optimization using BFS and DFS for water flow pathways, cycle detection, and capacity planning.</p>
+                <div class="business-tags">
+                    <span>Environmental</span>
+                    <span>Optimization</span>
+                    <span>Sustainability</span>
+                </div>
+                <div class="code-container">
+                    <h4>Code Example:</h4>
+                    <pre>
+                        <code>
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;stack&gt;
+
+using namespace std;
+
+class WastewaterGraph {
+private:
+    unordered_map&lt;string, vector&lt;string&gt;&gt; graph;
+
+public:
+    void addConnection(const string&amp; source, const string&amp; destination) {
+        graph[source].push_back(destination);
+    }
+
+    void bfs(const string&amp; start) {
+        cout &lt;&lt; "BFS Traversal:" &lt;&lt; endl;
+        set&lt;string&gt; visited;
+        queue&lt;string&gt; q;
+        unordered_map&lt;string, vector&lt;string&gt;&gt; paths;
+        q.push(start);
+        paths[start] = {start};
+
+        while (!q.empty()) {
+            string current = q.front();
+            q.pop();
+
+            if (visited.find(current) == visited.end()) {
+                visited.insert(current);
+                cout &lt;&lt; "Visited: " &lt;&lt; current &lt;&lt; endl;
+
+                for (const auto&amp; neighbor : graph[current]) {
+                    if (visited.find(neighbor) == visited.end()) {
+                        q.push(neighbor);
+                        paths[neighbor] = paths[current];
+                        paths[neighbor].push_back(neighbor);
+                    }
+                }
+            }
+        }
+
+        cout &lt;&lt; "\nPaths using BFS:" &lt;&lt; endl;
+        for (const auto&amp; path : paths) {
+            cout &lt;&lt; "Path to " &lt;&lt; path.first &lt;&lt; ": ";
+            for (const auto&amp; node : path.second) {
+                cout &lt;&lt; node &lt;&lt; " ";
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+
+    void dfs(const string&amp; start) {
+        cout &lt;&lt; "\nDFS Traversal:" &lt;&lt; endl;
+        set&lt;string&gt; visited;
+        vector&lt;string&gt; path;
+
+        function&lt;void(const string&amp;)&gt; dfsHelper = [&](const string&amp; node) {
+            visited.insert(node);
+            path.push_back(node);
+            cout &lt;&lt; "Visited: " &lt;&lt; node &lt;&lt; endl;
+
+            for (const auto&amp; neighbor : graph[node]) {
+                if (visited.find(neighbor) == visited.end()) {
+                    dfsHelper(neighbor);
+                }
+            }
+        };
+
+        dfsHelper(start);
+
+        cout &lt;&lt; "\nDFS Path: ";
+        for (const auto&amp; node : path) {
+            cout &lt;&lt; node &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    WastewaterGraph wg;
+    wg.addConnection("Source", "Treatment Plant A");
+    wg.addConnection("Source", "Treatment Plant B");
+    wg.addConnection("Treatment Plant A", "Reservoir");
+    wg.addConnection("Treatment Plant B", "Reservoir");
+    wg.addConnection("Reservoir", "Reuse Facility");
+    wg.addConnection("Reuse Facility", "End User");
+
+    wg.bfs("Source");
+    wg.dfs("Source");
+    return 0;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
         <section id="skills" class="section skills-section">
