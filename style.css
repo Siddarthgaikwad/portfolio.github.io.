@@ -298,3 +298,128 @@ footer {
         font-size: 2rem;
     }
 }
+/* Reflections Section Styling */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    padding: 20px 0;
+}
+
+.team-member {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: var(--spacing-md);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(220, 220, 220, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(220, 220, 220, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.member-info p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Connect With Me Section Styling */
+.contact-section {
+    background: linear-gradient(145deg, #000000, #1a1a1a);
+    padding: var(--spacing-lg) 0;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.social-btn {
+    padding: 15px 40px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.social-btn:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 220, 220, 0.2);
+}
+
+/* Section Title Enhancement */
+#ref .section-title,
+#contact .section-title {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #ref .section-title,
+    #contact .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Link Styling */
+.team-member {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
