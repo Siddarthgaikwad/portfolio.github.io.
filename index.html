@@ -61,302 +61,98 @@
             </div>
         </section>
 
-        <section id="business-cases" class="section business-cases-section">
-    <div class="container">
-        <h2 class="section-title">Business Cases</h2>
-        <div class="business-cases-grid">
-           
-         <!-- New Business Case: GreenTech Enterprises -->
-<div class="business-case-card">
-    <h3>GreenTech Enterprises: Effluent Reuse & Recycling</h3>
-    <p>GreenTech Enterprises focuses on optimizing wastewater management for effluent reuse and recycling. By applying graph-based optimization techniques, such as BFS and DFS, the company efficiently determines optimal water flow pathways and treatment processes, reducing environmental impact and enhancing resource management.</p>
-    <div class="business-tags">
-        <span>Environmental</span>
-        <span>Water Management</span>
-        <span>Sustainability</span>
-    </div>
-    <ul>
-        <li><strong>Optimization of Water Flow:</strong> Determining the most efficient pathways for recycling and reuse.</li>
-        <li><strong>Cycle Detection:</strong> Identifying inefficiencies and feedback loops in the system.</li>
-        <li><strong>Capacity Planning:</strong> Managing the capacity of treatment plants and pipelines to avoid bottlenecks.</li>
-    </ul>
-    <p><strong>Benefits:</strong></p>
-    <ul>
-        <li>Improved efficiency in water reuse processes.</li>
-        <li>Reduction in environmental impact through optimized resource management.</li>
-        <li>Enhanced decision-making using algorithmic insights into complex systems.</li>
-    </ul>
-</div>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Cases | Wastewater Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Business Cases</h1>
+    </header>
 
-<!-- Code Example in the Middle -->
-<div class="code-container code-center">
-    <h4>Code Example:</h4>
-    <pre>
-        <code>
-#include &lt;iostream&gt;
-#include &lt;unordered_map&gt;
-#include &lt;vector&gt;
-#include &lt;queue&gt;
-#include &lt;set&gt;
-#include &lt;stack&gt;
-
-using namespace std;
-
-class WastewaterGraph {
-private:
-    unordered_map&lt;string, vector&lt;string&gt;&gt; graph;
-
-public:
-    void addConnection(const string&amp; source, const string&amp; destination) {
-        graph[source].push_back(destination);
-    }
-
-    void bfs(const string&amp; start) {
-        cout &lt;&lt; "BFS Traversal:" &lt;&lt; endl;
-        set&lt;string&gt; visited;
-        queue&lt;string&gt; q;
-        unordered_map&lt;string, vector&lt;string&gt;&gt; paths;
-        q.push(start);
-        paths[start] = {start};
-
-        while (!q.empty()) {
-            string current = q.front();
-            q.pop();
-
-            if (visited.find(current) == visited.end()) {
-                visited.insert(current);
-                cout &lt;&lt; "Visited: " &lt;&lt; current &lt;&lt; endl;
-
-                for (const auto&amp; neighbor : graph[current]) {
-                    if (visited.find(neighbor) == visited.end()) {
-                        q.push(neighbor);
-                        paths[neighbor] = paths[current];
-                        paths[neighbor].push_back(neighbor);
-                    }
-                }
-            }
-        }
-
-        cout &lt;&lt; "\nPaths using BFS:" &lt;&lt; endl;
-        for (const auto&amp; path : paths) {
-            cout &lt;&lt; "Path to " &lt;&lt; path.first &lt;&lt; ": ";
-            for (const auto&amp; node : path.second) {
-                cout &lt;&lt; node &lt;&lt; " ";
-            }
-            cout &lt;&lt; endl;
-        }
-    }
-
-    void dfs(const string&amp; start) {
-        cout &lt;&lt; "\nDFS Traversal:" &lt;&lt; endl;
-        set&lt;string&gt; visited;
-        vector&lt;string&gt; path;
-
-        function&lt;void(const string&amp;)&gt; dfsHelper = [&](const string&amp; node) {
-            visited.insert(node);
-            path.push_back(node);
-            cout &lt;&lt; "Visited: " &lt;&lt; node &lt;&lt; endl;
-
-            for (const auto&amp; neighbor : graph[node]) {
-                if (visited.find(neighbor) == visited.end()) {
-                    dfsHelper(neighbor);
-                }
-            }
-        };
-
-        dfsHelper(start);
-
-        cout &lt;&lt; "\nDFS Path: ";
-        for (const auto&amp; node : path) {
-            cout &lt;&lt; node &lt;&lt; " ";
-        }
-        cout &lt;&lt; endl;
-    }
-};
-
-int main() {
-    WastewaterGraph wg;
-    wg.addConnection("Source", "Treatment Plant A");
-    wg.addConnection("Source", "Treatment Plant B");
-    wg.addConnection("Treatment Plant A", "Reservoir");
-    wg.addConnection("Treatment Plant B", "Reservoir");
-    wg.addConnection("Reservoir", "Reuse Facility");
-    wg.addConnection("Reuse Facility", "End User");
-
-    wg.bfs("Source");
-    wg.dfs("Source");
-    return 0;
-        </code>
-    </pre>
-</div>
-
-            <!-- Business Case: WaterGuard Solutions -->
-<section class="business-case">
-    <div class="business-case-card">
-        <h3>WaterGuard Solutions: Real-Time Data Analytics for Wastewater Systems</h3>
-        <p>
-            Real-time data analytics for wastewater systems involves continuously monitoring, processing, and analyzing data from sensors, pumps, and treatment systems. 
-            The goal is to quickly respond to anomalies, optimize operations, and ensure system reliability. 
-            Using data structures like arrays, stacks, and queues provides efficient ways to manage this real-time processing.
-        </p>
-        
-        <h4>Real-Time Processing with Arrays, Stacks, and Queues</h4>
-        
-        <h5>1. Arrays: Fast Access to Sensor Data</h5>
-        <p><strong>What It Does:</strong> An array is a simple data structure used to store a collection of data (e.g., sensor readings such as pH, temperature, or flow rate).</p>
-        <p><strong>Why It’s Used:</strong> Provides fast access to any sensor reading by index, making it easy to analyze recent data or historical trends.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Storing the latest 1,000 readings from sensors for quick visualization or analysis.</p>
-        
-        <h5>2. Stacks: Event Management and Undo Operations</h5>
-        <p><strong>What It Does:</strong> A stack follows the Last In, First Out (LIFO) principle, where the last item added is the first to be removed.</p>
-        <p><strong>Why It’s Used:</strong> Useful for backtracking or undo operations in event management.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Logging and undoing actions, such as:
-            <ul>
-                <li>"Sensor calibration started."</li>
-                <li>"Flow rate anomaly detected."</li>
-                <li>"Calibration reverted."</li>
-            </ul>
-        </p>
-        
-        <h5>3. Queues: Handling Data Streams</h5>
-        <p><strong>What It Does:</strong> A queue follows the First In, First Out (FIFO) principle, ensuring data is processed in the order it was received.</p>
-        <p><strong>Why It’s Used:</strong> Real-time processing requires managing continuous data streams efficiently. A queue buffers incoming data from sensors to ensure smooth processing.</p>
-        <p><strong>Example in Real-Time Analytics:</strong> Processing sensor data sequentially, such as:
-            <ul>
-                <li>pH level at time t<sub>1</sub>.</li>
-                <li>Flow rate at time t<sub>2</sub>.</li>
-                <li>Contamination level at time t<sub>3</sub>.</li>
-            </ul>
-        </p>
-        
-        <h4>How These Data Structures Work Together</h4>
-        <ul>
-            <li><strong>Array:</strong> Collects and stores data for batch analysis or periodic processing. 
-                <br><em>Example:</em> Store hourly average pH values in an array for later reporting.</li>
-            <li><strong>Stack:</strong> Manages system events or actions.
-                <br><em>Example:</em> Logging a sequence of actions for event tracing or undoing erroneous steps.</li>
-            <li><strong>Queue:</strong> Handles real-time data streams, ensuring that data is processed as it arrives.
-                <br><em>Example:</em> Sensor data is pushed into the queue, processed one by one, and then removed.</li>
-        </ul>
-        
-        <h4>Applications in Real-Time Wastewater Systems</h4>
-        
-        <ul>
-            <li><strong>Anomaly Detection:</strong>
+    <main>
+        <section class="business-case">
+            <h2>GreenTech Enterprises: Effluent Reuse & Recycling</h2>
+            <div class="tags">
+                <span>Environmental</span>
+                <span>Water Management</span>
+                <span>Sustainability</span>
+            </div>
+            <p class="description">GreenTech Enterprises focuses on optimizing wastewater management for effluent reuse and recycling. By applying graph-based optimization techniques, such as BFS and DFS, the company efficiently determines optimal water flow pathways and treatment processes, reducing environmental impact and enhancing resource management.</p>
+            
+            <div class="features">
+                <h3>Key Features</h3>
                 <ul>
-                    <li><strong>Arrays:</strong> Compare new sensor data against stored thresholds.</li>
-                    <li><strong>Stacks:</strong> Log detected anomalies and corrective actions.</li>
-                    <li><strong>Queues:</strong> Process incoming data streams to detect anomalies in real time.</li>
+                    <li><strong>Optimization of Water Flow:</strong> Determining the most efficient pathways for recycling and reuse.</li>
+                    <li><strong>Cycle Detection:</strong> Identifying inefficiencies and feedback loops in the system.</li>
+                    <li><strong>Capacity Planning:</strong> Managing the capacity of treatment plants and pipelines to avoid bottlenecks.</li>
                 </ul>
-            </li>
-            <li><strong>System Optimization:</strong>
+            </div>
+
+            <div class="benefits">
+                <h3>Benefits</h3>
                 <ul>
-                    <li><strong>Arrays:</strong> Store and analyze historical data for pattern recognition.</li>
-                    <li><strong>Stacks:</strong> Revert optimization steps during testing or failures.</li>
-                    <li><strong>Queues:</strong> Continuously feed operational data for optimization models.</li>
+                    <li>Improved efficiency in water reuse processes</li>
+                    <li>Reduction in environmental impact through optimized resource management</li>
+                    <li>Enhanced decision-making using algorithmic insights into complex systems</li>
                 </ul>
-            </li>
-            <li><strong>Event Handling:</strong>
+            </div>
+        </section>
+
+        <section class="business-case">
+            <h2>WaterGuard Solutions: Real-Time Analytics</h2>
+            <div class="data-structures">
+                <h3>Real-Time Processing Components</h3>
+                
+                <div class="component">
+                    <h4>Arrays: Fast Access to Sensor Data</h4>
+                    <p>Provides quick access to sensor readings for analysis and visualization of trends.</p>
+                </div>
+
+                <div class="component">
+                    <h4>Stacks: Event Management</h4>
+                    <p>Manages system events and provides undo capabilities for system operations.</p>
+                </div>
+
+                <div class="component">
+                    <h4>Queues: Data Stream Processing</h4>
+                    <p>Handles continuous data streams from sensors ensuring sequential processing.</p>
+                </div>
+            </div>
+
+            <div class="applications">
+                <h3>Key Applications</h3>
                 <ul>
-                    <li><strong>Arrays:</strong> Hold a record of all events for reporting.</li>
-                    <li><strong>Stacks:</strong> Undo the last few actions during troubleshooting.</li>
-                    <li><strong>Queues:</strong> Prioritize event resolution based on urgency.</li>
+                    <li>
+                        <strong>Anomaly Detection</strong>
+                        <ul>
+                            <li>Real-time monitoring of sensor data</li>
+                            <li>Immediate alert system for irregularities</li>
+                            <li>Historical pattern analysis</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>System Optimization</strong>
+                        <ul>
+                            <li>Continuous performance monitoring</li>
+                            <li>Resource allocation management</li>
+                            <li>Predictive maintenance scheduling</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-</section>
-            <!-- Code Example: Real-Time Data Processing -->
-<div class="code-container code-center">
-    <h4>Code Example: Real-Time Data Processing for Wastewater Analytics</h4>
-    <pre>
-        <code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;stack&gt;
-#include &lt;queue&gt;
+            </div>
+        </section>
+    </main>
 
-using namespace std;
-
-// Simulate real-time data processing for wastewater analytics
-class RealTimeAnalytics {
-private:
-    vector&lt;double&gt; sensorData; // Array for storing sensor readings
-    stack&lt;string&gt; eventStack; // Stack for event management
-    queue&lt;double&gt; dataQueue;  // Queue for real-time data processing
-
-public:
-    // Add new sensor reading (real-time data)
-    void addSensorData(double data) {
-        sensorData.push_back(data);
-        dataQueue.push(data);
-    }
-
-    // Simulate an event and store it in the stack
-    void logEvent(const string&amp; event) {
-        eventStack.push(event);
-        cout &lt;&lt; "Event logged: " &lt;&lt; event &lt;&lt; endl;
-    }
-
-    // Process data in the queue (FIFO order)
-    void processQueue() {
-        cout &lt;&lt; "\nProcessing data queue:" &lt;&lt; endl;
-        while (!dataQueue.empty()) {
-            double data = dataQueue.front();
-            dataQueue.pop();
-            cout &lt;&lt; "Processed data: " &lt;&lt; data &lt;&lt; endl;
-        }
-    }
-
-    // Undo the last logged event using the stack
-    void undoLastEvent() {
-        if (!eventStack.empty()) {
-            cout &lt;&lt; "\nUndoing event: " &lt;&lt; eventStack.top() &lt;&lt; endl;
-            eventStack.pop();
-        } else {
-            cout &lt;&lt; "\nNo events to undo." &lt;&lt; endl;
-        }
-    }
-
-    // Display all sensor data stored in the array
-    void displaySensorData() {
-        cout &lt;&lt; "\nSensor Data (Array): ";
-        for (double data : sensorData) {
-            cout &lt;&lt; data &lt;&lt; " ";
-        }
-        cout &lt;&lt; endl;
-    }
-};
-
-int main() {
-    RealTimeAnalytics analytics;
-
-    // Simulate real-time sensor readings
-    analytics.addSensorData(7.5);
-    analytics.addSensorData(6.8);
-    analytics.addSensorData(7.2);
-
-    // Log events
-    analytics.logEvent("Sensor calibration");
-    analytics.logEvent("Anomaly detected");
-    
-    // Display all sensor data
-    analytics.displaySensorData();
-
-    // Process queued data
-    analytics.processQueue();
-
-    // Undo the last event
-    analytics.undoLastEvent();
-
-    // Undo another event
-    analytics.undoLastEvent();
-
-    return 0;
-        </code>
-    </pre>
-</div>
-
+    <footer>
+        <p>© 2025 Wastewater Management Solutions</p>
+    </footer>
+</body>
+</html>
 
         <!-- New Section: Reflections -->
         <section id="reflections" class="section reflections-section">
